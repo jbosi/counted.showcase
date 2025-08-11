@@ -10,7 +10,7 @@ export default function Home() {
             <a className="text-gh-neutral hover:text-gh-accent transition-colors" href="#contact">Contact</a>
           </nav>
           <div className="ml-auto hidden sm:flex gap-3">
-            <a href="#contact" className="inline-flex items-center rounded-md border border-gh-border bg-gh-canvas px-3 py-1.5 text-sm font-semibold text-gh-neutral hover:bg-gray-50 hover:border-gray-300 dark:hover:bg-[#161b22] transition-colors">Essayer</a>
+            <a href="#contact" className="inline-flex items-center rounded-md border border-gh-border bg-gh-canvas px-3 py-1.5 text-sm font-semibold text-gh-neutral hover:bg-gray-50 hover:border-gray-300 dark:hover:bg-[#6b6f75] transition-colors">Essayer</a>
             <a href="https://github.com" className="inline-flex items-center rounded-md bg-gh-accent px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-gh-accent-emphasis focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gh-accent">Code source</a>
           </div>
         </div>
@@ -29,7 +29,7 @@ export default function Home() {
               </ul>
               <div className="flex gap-3">
                 <a href="#contact" className="inline-flex items-center rounded-md bg-gh-accent px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gh-accent-emphasis focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gh-accent">Rejoindre</a>
-                <a href="#features" className="inline-flex items-center rounded-md border border-gh-border bg-gh-canvas px-5 py-2 text-sm font-semibold text-gh-neutral hover:bg-gray-50 hover:border-gray-300 dark:hover:bg-[#161b22]">Fonctionnalités</a>
+                <a href="#features" className="inline-flex items-center rounded-md border border-gh-border bg-gh-canvas px-5 py-2 text-sm font-semibold text-gh-neutral hover:bg-gray-50 hover:border-gray-300 dark:hover:bg-[#616975]">Fonctionnalités</a>
               </div>
             </div>
             <div className="flex-1 flex items-center justify-center">

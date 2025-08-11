@@ -72,30 +72,6 @@ hr {
   margin: 2rem 0;
 }
 
-/* Minimal button look */
-.btn-plain {
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  padding: .45rem .9rem;
-  font-size: .875rem;
-  font-weight: 500;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: var(--canvas);
-  color: var(--fg-default);
-  transition: background .15s, border-color .15s, color .15s;
-}
-
-.btn-plain:hover {
-  background: #f3f4f6;
-}
-
-@media (prefers-color-scheme: dark) {
-  .btn-plain:hover {
-    background: #161b22;
-  }
-}
 
 @media (prefers-color-scheme: dark) {
   html {
