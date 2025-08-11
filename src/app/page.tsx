@@ -1,107 +1,90 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-base-200 flex flex-col">
-      <header className="navbar bg-base-100 shadow-md z-10">
-        <div className="flex-1">
-          <span className="text-2xl font-bold text-primary">Counted</span>
-        </div>
-        <div className="flex-none">
-          <a className="btn btn-ghost btn-sm" href="#features">Fonctionnalités</a>
-          <a className="btn btn-ghost btn-sm" href="#philosophy">Philosophie</a>
-          <a className="btn btn-primary btn-sm" href="#contact">Contact</a>
+    <div className="min-h-screen flex flex-col bg-gh-bg text-gh-neutral">
+      <header className="w-full border-b border-gh-border bg-gh-canvas/95 backdrop-blur supports-[backdrop-filter]:bg-gh-canvas/80 sticky top-0 z-10">
+        <div className="mx-auto max-w-6xl px-6 py-3 flex items-center gap-8">
+          <span className="text-xl font-semibold tracking-tight select-none">Counted</span>
+          <nav className="flex items-center gap-4 text-sm font-medium">
+            <a className="text-gh-neutral hover:text-gh-accent transition-colors" href="#features">Fonctionnalités</a>
+            <a className="text-gh-neutral hover:text-gh-accent transition-colors" href="#philosophy">Philosophie</a>
+            <a className="text-gh-neutral hover:text-gh-accent transition-colors" href="#contact">Contact</a>
+          </nav>
+          <div className="ml-auto hidden sm:flex gap-3">
+            <a href="#contact" className="inline-flex items-center rounded-md border border-gh-border bg-gh-canvas px-3 py-1.5 text-sm font-semibold text-gh-neutral hover:bg-gray-50 hover:border-gray-300 dark:hover:bg-[#161b22] transition-colors">Essayer</a>
+            <a href="https://github.com" className="inline-flex items-center rounded-md bg-gh-accent px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-gh-accent-emphasis focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gh-accent">Code source</a>
+          </div>
         </div>
       </header>
 
-      <main className="flex-1 flex flex-col items-center justify-center px-4">
-        <section className="text-center max-w-2xl mt-16 mb-10">
-          <h1 className="text-5xl font-extrabold mb-4 text-primary">Counted</h1>
-          <h2 className="text-xl font-light mb-6">L’alternative moderne, libre et éthique à Tricount</h2>
-          <div className="mb-6">
-            <span className="badge badge-lg badge-primary mr-2">Open Source</span>
-            <span className="badge badge-lg badge-secondary mr-2">Gratuit</span>
-            <span className="badge badge-lg badge-accent">Respect de la vie privée</span>
-          </div>
-          <p className="mb-8 text-base-content/80">
-            <b>Counted</b> est une application de gestion de comptes entre amis, inspirée de Tricount, mais conçue pour aller plus loin&nbsp;: plus de fonctionnalités, aucune collecte de données, et un modèle de redistribution des bénéfices choisi par les utilisateurs.
-          </p>
-          <a className="btn btn-primary btn-lg" href="#contact">Rejoindre la communauté</a>
+      <main className="flex-1">
+        <section className="mx-auto max-w-6xl px-6 py-20 md:py-28 flex flex-col md:flex-row gap-16">
+            <div className="flex-1 max-w-xl">
+              <h1 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-6">Gérez vos comptes simplement.</h1>
+              <p className="text-lg text-[var(--fg-muted)] mb-6">L’alternative moderne, libre et éthique à Tricount.</p>
+              <ul className="space-y-2 text-sm mb-8">
+                <li className="flex gap-2"><span className="text-gh-success">✔</span><span>Open source, gratuit et sans pub</span></li>
+                <li className="flex gap-2"><span className="text-gh-success">✔</span><span>Respect total de la vie privée</span></li>
+                <li className="flex gap-2"><span className="text-gh-success">✔</span><span>Développé en Rust pour la performance</span></li>
+                <li className="flex gap-2"><span className="text-gh-success">✔</span><span>Redistribution des bénéfices choisie par les utilisateurs</span></li>
+              </ul>
+              <div className="flex gap-3">
+                <a href="#contact" className="inline-flex items-center rounded-md bg-gh-accent px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gh-accent-emphasis focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gh-accent">Rejoindre</a>
+                <a href="#features" className="inline-flex items-center rounded-md border border-gh-border bg-gh-canvas px-5 py-2 text-sm font-semibold text-gh-neutral hover:bg-gray-50 hover:border-gray-300 dark:hover:bg-[#161b22]">Fonctionnalités</a>
+              </div>
+            </div>
+            <div className="flex-1 flex items-center justify-center">
+              <div className="w-full max-w-md border border-dashed border-gh-border rounded-lg p-6 bg-gh-canvas">
+                <div className="h-52 flex items-center justify-center text-sm text-[var(--fg-muted)]">(Aperçu / capture à venir)</div>
+              </div>
+            </div>
         </section>
 
-        <section id="features" className="w-full max-w-3xl mb-16">
-          <h3 className="text-2xl font-bold mb-4 text-center">Fonctionnalités principales</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="card bg-base-100 shadow-md">
-              <div className="card-body">
-                <h4 className="card-title">Développée en Rust</h4>
-                <p>Performance, sécurité et fiabilité grâce à un langage moderne.</p>
+        <section id="features" className="mx-auto max-w-6xl px-6 py-12">
+          <h2 className="text-2xl font-semibold mb-8">Fonctionnalités principales</h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              { title: 'Ajout rapide', desc: 'Ajoutez des dépenses en un clic, seul ou en groupe.' },
+              { title: 'Calculs automatiques', desc: 'Les comptes sont toujours justes, sans prise de tête.' },
+              { title: 'Export & historique', desc: 'Gardez une trace et exportez à tout moment.' },
+            ].map(f => (
+              <div key={f.title} className="border border-gh-border rounded-md bg-gh-canvas p-5 flex flex-col gap-2">
+                <h3 className="font-medium">{f.title}</h3>
+                <p className="text-sm text-[var(--fg-muted)] leading-relaxed">{f.desc}</p>
               </div>
-            </div>
-            <div className="card bg-base-100 shadow-md">
-              <div className="card-body">
-                <h4 className="card-title">Aucune collecte de données</h4>
-                <p>Vos informations restent privées, aucune exploitation commerciale.</p>
-              </div>
-            </div>
-            <div className="card bg-base-100 shadow-md">
-              <div className="card-body">
-                <h4 className="card-title">Gratuit et sans pub</h4>
-                <p>Utilisation 100% gratuite, sans publicité ni frais cachés.</p>
-              </div>
-            </div>
-            <div className="card bg-base-100 shadow-md">
-              <div className="card-body">
-                <h4 className="card-title">Redistribution éthique</h4>
-                <p>Les utilisateurs choisissent où vont les bénéfices générés.</p>
-              </div>
-            </div>
-            <div className="card bg-base-100 shadow-md md:col-span-2">
-              <div className="card-body">
-                <h4 className="card-title">Fonctionnalités avancées</h4>
-                <p>Gestion des groupes, calculs automatiques, historique, export, et plus à venir.</p>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
-        <section id="philosophy" className="w-full max-w-3xl mb-16">
-          <h3 className="text-2xl font-bold mb-4 text-center">Notre philosophie</h3>
-          <div className="mockup-window border bg-base-100 p-6">
-            <ul className="timeline timeline-vertical">
-              <li>
-                <div className="timeline-start timeline-box">Respect de la vie privée</div>
-                <div className="timeline-middle">🔒</div>
-              </li>
-              <li>
-                <div className="timeline-start timeline-box">Open source & transparent</div>
-                <div className="timeline-middle">🌍</div>
-              </li>
-              <li>
-                <div className="timeline-start timeline-box">Redistribution choisie par les utilisateurs</div>
-                <div className="timeline-middle">🤝</div>
-              </li>
-              <li>
-                <div className="timeline-start timeline-box">Développé en Rust</div>
-                <div className="timeline-middle">🦀</div>
-              </li>
-            </ul>
+        <section id="philosophy" className="mx-auto max-w-6xl px-6 py-12">
+          <h2 className="text-2xl font-semibold mb-8">Notre philosophie</h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              { title: 'Respect de la vie privée', desc: 'Vos données ne sont jamais collectées ni revendues.' },
+              { title: 'Open source & transparent', desc: 'Le code est public, chacun peut contribuer ou auditer.' },
+              { title: 'Redistribution éthique', desc: 'Vous choisissez où vont les bénéfices générés.' },
+            ].map(f => (
+              <div key={f.title} className="border border-gh-border rounded-md bg-gh-canvas p-5 flex flex-col gap-2">
+                <h3 className="font-medium">{f.title}</h3>
+                <p className="text-sm text-[var(--fg-muted)] leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
           </div>
         </section>
 
-        <section id="contact" className="w-full max-w-xl mb-16">
-          <h3 className="text-2xl font-bold mb-4 text-center">Contact & communauté</h3>
-          <div className="card bg-base-100 shadow-md">
-            <div className="card-body items-center">
-              <p className="mb-4">Envie de contribuer, de suivre le projet ou de donner votre avis&nbsp;?</p>
-              <a className="btn btn-accent btn-wide" href="mailto:contact@counted.app">contact@counted.app</a>
+        <section id="contact" className="mx-auto max-w-3xl px-6 py-12">
+          <h2 className="text-2xl font-semibold mb-6">Contact & communauté</h2>
+          <div className="border border-gh-border rounded-md bg-gh-canvas p-6 flex flex-col md:flex-row gap-6 items-start md:items-center">
+            <div className="flex-1">
+              <p className="text-sm leading-relaxed mb-2">Envie de contribuer, de suivre le projet ou de donner votre avis ?</p>
+              <p className="text-xs text-[var(--fg-muted)]">Écrivez-nous, on répond vite.</p>
             </div>
+            <a className="inline-flex items-center rounded-md border border-gh-border bg-gh-canvas px-4 py-2 text-sm font-medium hover:bg-gray-50 hover:border-gray-300 dark:hover:bg-[#161b22]" href="mailto:contact@counted.app">contact@counted.app</a>
           </div>
         </section>
       </main>
 
-      <footer className="footer footer-center p-4 bg-base-100 text-base-content border-t">
-        <aside>
-          <p>&copy; {new Date().getFullYear()} Counted – Conçu avec <span className="text-error">❤️</span> en Rust</p>
-        </aside>
+      <footer className="w-full border-t border-gh-border bg-gh-canvas text-center text-xs text-[var(--fg-muted)] py-8 mt-10">
+        &copy; {new Date().getFullYear()} Counted · Conçu avec <span className="text-gh-danger">❤</span> en Rust
       </footer>
     </div>
   );
